@@ -4,6 +4,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
+import getStripe from '../../lib/getStripe';
 
 const ProductDetails = ({ product, products }) => {
     const { image, name, details, price, description } = product;
@@ -12,7 +13,6 @@ const ProductDetails = ({ product, products }) => {
 
     const handleBuyNow = () => {
         onAdd(product, qty);
-
         setShowCart(true);
     }
 
