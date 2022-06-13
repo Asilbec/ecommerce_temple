@@ -12,12 +12,14 @@ export default {
             of: [{ type: 'image' }],
             options: {
                 hotspot: true
-            }
+            },
+            validation: Rule => Rule.required()
         },
         {
             name: 'name',
             title: 'Name',
-            type: 'string'
+            type: 'string',
+            validation: Rule => Rule.required().min(1)
         },
         {
             name: 'slug',
@@ -26,17 +28,22 @@ export default {
             options: {
                 source: 'name',
                 maxLength: 90,
-            }
+            },
+            validation: Rule => Rule.required().min(1)
+
         },
         {
             name: 'price',
             title: 'Price',
-            type: 'number'
+            type: 'number',
+            validation: Rule => Rule.required().min(1)
+
         },
         {
             name: 'details',
             title: 'Details',
-            type: 'string'
+            type: 'string',
+
         },
         {
             title: 'Description',
