@@ -39,7 +39,7 @@ const Cart = () => {
         type="button"
         className="cart-heading"
         onClick={() => setShowCart(false)}>
-          <AiOutlineLeft />
+          <AiOutlineLeft color='white' />
           <span className="heading">Your Cart</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
@@ -99,7 +99,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
-                Pay with Stripe
+                Checkout
               </button>
             </div>
           </div>
